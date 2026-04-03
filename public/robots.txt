@@ -1,14 +1,15 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Karma Swap Robots file
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /*.json$
+Disallow: /?*utm_*
+Disallow: /?*fbclid*
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.officialkarmaswap.com/sitemap.xml
+Sitemap: https://www.officialkarmaswap.com/robots.txt
