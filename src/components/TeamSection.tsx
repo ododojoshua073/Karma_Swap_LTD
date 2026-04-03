@@ -37,8 +37,8 @@ const team = [
     bio: "Tech lead building the scalable Flutter and Firebase platform. Daniel architects the systems that power millions of potential trades with reliability and speed.",
     initials: "SD",
     image: danielImg,
-    link: "#",
-    platform: "instagram",
+    link: "https://wa.me/+2348139231513?text=Hello",
+    platform: "whatsapp",
   },
 ];
 
