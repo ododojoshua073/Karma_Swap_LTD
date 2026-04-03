@@ -1,4 +1,5 @@
-# Karma Swap Robots file
+# Karma Swap Robots.txt
+
 User-agent: *
 Allow: /
 Disallow: /admin
@@ -7,9 +8,5 @@ Disallow: /*.json$
 Disallow: /?*utm_*
 Disallow: /?*fbclid*
 
-# Crawl delay (in seconds)
-Crawl-delay: 1
-
 # Sitemap location
-Sitemap: https://www.officialkarmaswap.com/sitemap.xml
-Sitemap: https://www.officialkarmaswap.com/robots.txt
+Sitemap: https://officialkarmaswap.com/sitemap.xml
