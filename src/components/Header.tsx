@@ -3,9 +3,9 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/karma-swap-logo.jpeg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
+import { useNavigate, useLocation } from "react-router-dom";
 const navItems = [
-  { label: "Home", href: "/", scrollable: true },
+  { label: "Home", href: "#", scrollable: true },
   { label: "About Us", href: "#about", scrollable: true },
   { label: "Sustainability Impact", href: "#impact", scrollable: true },
   { label: "Contact", href: "#contact", scrollable: true },
@@ -15,20 +15,32 @@ const navItems = [
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollTo = (href: string) => {
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
-  };
 
+    const id = href.replace("#", "");
+
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      return;
+    }
+
+    const el = document.getElementById(id);
+    el?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b">
       <div className="container flex items-center justify-between h-16">
         {/* Logo */}
-        <a
-          href="#home"
+        <div
           onClick={() => scrollTo("#home")}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 cursor-pointer"
         >
           <img
             src={logo}
@@ -36,7 +48,7 @@ const Header = () => {
             className="w-9 h-9 rounded-full object-cover"
           />
           <span className="font-bold text-lg text-foreground">Karma Swap</span>
-        </a>
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
