@@ -8,6 +8,7 @@ import MediaKit from "./pages/MediaKit";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import ScrollToHashElement from "@/components/ScrollToHashElement";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToHashElement />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/media-kit" element={<MediaKit />} />

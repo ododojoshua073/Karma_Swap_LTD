@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowLeft, Home, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ const NotFound = () => {
     updateSEO(pageConfigs.notFound);
   }, [location.pathname]);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -28,16 +28,19 @@ const NotFound = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        duration: 0.6,
+        ease: "easeOut", 
+      },
     },
   };
 
-  const floatingVariants = {
+  const floatingVariants: Variants = {
     animate: {
       y: [0, -20, 0],
       transition: {
@@ -131,7 +134,7 @@ const NotFound = () => {
             asChild
             className="w-full sm:w-auto group"
           >
-            <Link className="inline-flex items-center gap-2">
+            <Link to="/" className="inline-flex items-center gap-2">
               <Home className="w-5 h-5" />
               <span>Back to Home</span>
             </Link>
