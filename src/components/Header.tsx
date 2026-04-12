@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 const navItems = [
   { label: "Home", href: "/", scrollable: true },
-  { label: "About Us", href: "/#about", scrollable: true },
-  { label: "Sustainability Impact", href: "/#impact", scrollable: true },
-  { label: "Contact", href: "/#contact", scrollable: true },
+  { label: "About Us", href: "#about", scrollable: true },
+  { label: "Sustainability Impact", href: "#impact", scrollable: true },
+  { label: "Contact", href: "#contact", scrollable: true },
   { label: "Blog", href: "/blog", scrollable: false },
 ];
 
