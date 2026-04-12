@@ -1,0 +1,25 @@
+{
+  "name": "Karma Swap Ltd",
+  "short_name": "Karma Swap",
+  "description": "A cash-free circular economy platform empowering Nigerian communities to reuse, share, and reduce waste through karma points-based trades.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#22c55e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
